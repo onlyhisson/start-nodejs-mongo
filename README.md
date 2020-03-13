@@ -40,6 +40,8 @@ COOKIE_SECRET="CookieSecret"
 MONGO_URL="mongodb://호스트명:포트번호/DB명"
 ```
 
+### Node Module install
+$ npm install
 
 ### 프로그램 실행
 $ npm run-script start
