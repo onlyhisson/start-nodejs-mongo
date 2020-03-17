@@ -35,6 +35,7 @@ $ vi .env
 ```
 # Global
 COOKIE_SECRET="CookieSecret"
+PORT="3100"
 
 # MongoDB Config Setting
 MONGO_URL="mongodb://호스트명:포트번호/DB명"
