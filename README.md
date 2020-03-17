@@ -34,6 +34,7 @@ $ vi .env
 
 ```
 # Global
+NODE_ENV="development"
 COOKIE_SECRET="CookieSecret"
 PORT="3100"
 
