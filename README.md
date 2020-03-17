@@ -26,7 +26,7 @@ $ git clone https://github.com/onlyhisson/start-nodejs-mongo.git
 
 
 ### 환경 설정 파일 
-$ cd 상위경로/startNode
+$ cd 상위경로/start-nodejs-mongo
 
 $ vi .env
 
