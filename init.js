@@ -7,6 +7,7 @@ dotenv.config();  // .env 파일에서 변수를 load
 
 import "./models/Video";
 import "./models/Comment";
+import "./models/Posts";
 import "./models/User";
 
 const PORT = process.env.PORT || 3100;
