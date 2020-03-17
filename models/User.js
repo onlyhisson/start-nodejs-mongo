@@ -31,6 +31,8 @@ const UserSchema = new mongoose.Schema({
 });
 
 // plugin() : be provided to configure the hashing algorithm
+// 자동으로 password의 hashing과 salting을 관리, db에 password가 salt와 hash로 저장
+// usernameField 에 변경되지 않을 값 설정, username으로 email를 사용
 UserSchema.plugin(passportLocalMongoose, { usernameField: "email" });
 
 // 스키마와 몽고디비 컬렉션을 연결

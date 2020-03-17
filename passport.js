@@ -8,12 +8,13 @@ import {
 } from "./controllers/userController";
 import routes from "./routes";
 
-const PORT = 3100;
+const PORT = process.env.PORT || 3100;
 
 // use static authenticate method of model in LocalStrategy
 // CHANGE: USE "createStrategy" INSTEAD OF "authenticate"
-passport.use(User.createStrategy());
-
+// username과 password를 사용해서 쿠키-세션으로 인증하는 strategy를 사용
+// 아래 코드는 passport-local-mongoose를 사용함으로 기존 passport-local 코드를 줄인 형태
+passport.use(User.createStrategy());  
 
 /*
 passport.use(

@@ -16,12 +16,12 @@ import userRouter from "./routers/userRouter";
 import videoRouter from "./routers/videoRouter";
 import globalRouter from "./routers/globalRouter";
 import apiRouter from "./routers/apiRouter";
-
-import "./passport";
 import postsRouter from './routers/postsRouter';
 
+import "./passport";  // passport 설정 파일(User 모델 생성 -> passport 선언 -> passport-local 기본설정)
+
 const app = express(); // express를 실행해서 변수 참조
-const CokieStore = MongoStore(session);
+const MongoCookieStore = MongoStore(session);
 
 app.use(helmet());                                  // application 보안
 app.set('view engine', 'ejs');                      // 템플릿 설정
@@ -40,19 +40,20 @@ app.use(cookiePaser());
 app.use(bodyParser.json());                         // 데이터 전송시 서버가 json 인 것을 알도록
 app.use(bodyParser.urlencoded({ extended: true })); // request 정보에서 form이나 json 형태의 body를 검사
 app.use(morgan("dev"));
-
 app.use(
     session({
-      secret: process.env.COOKIE_SECRET,
-      resave: true,
-      saveUninitialized: false,
-      store: new CokieStore({ mongooseConnection: mongoose.connection })
+      secret: process.env.COOKIE_SECRET,  // 서버에서 session ID 암호화 저장시 사용
+      resave: true,                       // 요청하는 동안 세션을 항상 강제 저장 여부
+      saveUninitialized: false,           // 초기화하지 않고 스토어에 세션 저장 여부
+      store: new MongoCookieStore({       // 데이터 저장 형식
+        mongooseConnection: mongoose.connection   // init.js > db.js > mongoose.connect(connectionOptions);
+      })
     })
   );
 app.use(flash()); // 내부적으로 session을 사용하기 때문에 session 아래에 미들웨어 사용
 
-app.use(passport.initialize());
-app.use(passport.session());
+app.use(passport.initialize()); // passport 초기화
+app.use(passport.session());    // 로그인을 지속시키기 위해 세션 사용
 
 app.use(localsMiddleware);
 app.use(routes.home, globalRouter);
