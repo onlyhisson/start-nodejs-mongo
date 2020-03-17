@@ -7,12 +7,16 @@ if(process.env.NODE_ENV == 'development') {
   mongoose.set('debug', true);  // 몽구수 쿼리 내용 로그 확인
 }
 
+// Error: DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes insted
+mongoose.set('useCreateIndex', true);
+
 // 몽고디비 몽구스 연결
 mongoose.connect(
   process.env.PRODUCTION ? process.env.MONGO_URL_PROD : process.env.MONGO_URL,
   {
     useNewUrlParser: true,
-    useFindAndModify: false
+    useFindAndModify: false,
+    useUnifiedTopology: true
   }
 );
 
