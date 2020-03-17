@@ -32,9 +32,9 @@
     "sequelize": "^5.21.4"
   },
   "scripts": {
-    "start": "pm2 start --interpreter babel-node init.js --name startNode",
-    "dev-start": "pm2 start --interpreter babel-node init.js --name startNode --watch",
-    "restart": "pm2 delete startNode && pm2 start --interpreter babel-node init.js --name startNode",
-    "dev-restart": "pm2 delete startNode && pm2 start --interpreter babel-node init.js --name startNode --watch"
+    "start": "pm2 start --interpreter babel-node init.js --name start-node-mongo",
+    "dev-start": "pm2 start --interpreter babel-node init.js --name start-node-mongo --watch",
+    "restart": "pm2 delete start-node-mongo && pm2 start --interpreter babel-node init.js --name start-node-mongo",
+    "dev-restart": "pm2 delete start-node-mongo && pm2 start --interpreter babel-node init.js --name start-node-mongo --watch"
   }
 }
