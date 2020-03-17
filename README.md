@@ -22,7 +22,7 @@ or
 
 cd 상위경로
 
-$ git clone https://github.com/onlyhisson/startNode.git 
+$ git clone https://github.com/onlyhisson/start-nodejs-mongo.git
 
 
 ### 환경 설정 파일 
