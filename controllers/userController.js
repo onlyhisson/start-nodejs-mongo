@@ -80,6 +80,7 @@ export const postChangePassword = async (req, res) => {
       return;
     }
     await req.user.changePassword(oldPassword, newPassword);
+    req.flash("success", "Passwords changed");
     res.redirect(`${routes.users}${routes.profile}`);
   } catch (error) {
     req.flash("error", "Can't change password");  // session에서 데이터 삽입
