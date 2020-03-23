@@ -59,7 +59,7 @@ http://아이피:3100
 ![Alt text](/public/images/project/src_tree.png)   
 
 ### /models   
-Link: [models][models_link]   
+[models][models_link]   
 
 [models_link]: https://github.com/onlyhisson/start-nodejs-mongo/blob/master/public/documents/models.md   
 
