@@ -46,10 +46,8 @@ MONGO_URL="mongodb://호스트명:포트번호/DB명"
 $ npm install
 
 ### 프로그램 실행
-$ npm run-script start
-
-or
-
+$ npm run-script start   
+or   
 $ pm2 start --interpreter babel-node init.js --name startNode
 
 
