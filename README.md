@@ -58,7 +58,7 @@ http://아이피:3100
 ## 소스 설명
 ![Alt text](/public/images/project/src_tree.png)   
 
-public : javascript, images, css 등의 자원   
+/public : javascript, images, css 등의 자원   
 
 [/models][models_link]   
 
