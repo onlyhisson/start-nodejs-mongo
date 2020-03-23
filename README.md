@@ -75,8 +75,14 @@ http://아이피:3100
 /view : View 페이지   
 
 app.js  : application 설정   
+
 db.js   : mongodb 연결 설정   
+
 init.js : 프로그램 실행 파일, 내부적으로 application 설정과 db연결 설정을 한다.   
+
 middlewares.js  : 특정 uri를 통해 실행될 함수를 실행하기 전 처리 함수, 세션 유무, 모든 요청에 대한 응답시 공통적으로 들어갈 데이터 첨부 등    
+
 passport.js     : 로그인 처리 함수 설정   
+
 routes.js       : 요청 uri 와 실행될 함수 매핑
+
