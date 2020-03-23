@@ -62,7 +62,7 @@ http://아이피:3100
 
 [controllers_link]: https://github.com/onlyhisson/start-nodejs-mongo/tree/master/controllers
 
-[/models][models_link]   
+[/models][models_link]   : 각 collection 설정
 
 [models_link]: https://github.com/onlyhisson/start-nodejs-mongo/tree/master/models   
 
