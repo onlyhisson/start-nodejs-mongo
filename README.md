@@ -58,8 +58,9 @@ http://아이피:3100
 ## 소스 설명
 ![Alt text](/public/images/project/src_tree.png)   
 
-### /models   
-[models][models_link]   
+public : javascript, images, css 등의 자원   
+
+[/models][models_link]   
 
 [models_link]: https://github.com/onlyhisson/start-nodejs-mongo/blob/master/public/documents/models.md   
 
