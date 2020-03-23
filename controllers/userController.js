@@ -1,5 +1,5 @@
 import passport from "passport";
-import routes from "../routes";
+import routes from "../routers";
 import User from "../models/User";
 import { saveImageLocal, deleteFileLocal } from './../public/js/common';
 

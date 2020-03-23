@@ -1,4 +1,4 @@
-import routes from "../routes";
+import routes from "../routers";
 import Posts from "../models/Posts";
 import moment from "moment";
 import { errorHandler } from "../public/js/common";

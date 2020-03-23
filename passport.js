@@ -6,7 +6,7 @@ import {
   githubLoginCallback,
   facebookLoginCallback
 } from "./controllers/userController";
-import routes from "./routes";
+import routes from "./routers";
 
 const PORT = process.env.PORT || 3100;
 

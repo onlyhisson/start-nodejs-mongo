@@ -1,4 +1,4 @@
-import routes from "../routes";
+import routes from "../routers";
 import Video from "../models/Video";
 import Comment from "../models/Comment";
 

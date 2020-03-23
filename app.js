@@ -11,7 +11,7 @@ import path from "path";
 import flash from "express-flash";
 import MongoStore from "connect-mongo";
 import { localsMiddleware } from './middlewares';
-import routes from "./routes";
+import routes from "./routers";
 import userRouter from "./routers/userRouter";
 import videoRouter from "./routers/videoRouter";
 import globalRouter from "./routers/globalRouter";
