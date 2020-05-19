@@ -44,8 +44,10 @@ export const postEditProfile = async (req, res) => {
 
     if(result.status == 'ERROR') throw {data: result.data}  // 에러 처리
     if(file) {  // 프로필 사진 변경시
-      const oldFile = (req.user.avatarUrl).replace(result.data.savePath, '');
-      await deleteFileLocal(file.destination + oldFile)    // 이전 파일 삭제
+      if(req.user.avatarUrl) {
+        const oldFile = (req.user.avatarUrl).replace(result.data.savePath, '');
+        await deleteFileLocal(file.destination + oldFile)    // 이전 파일 삭제
+      }
       imgUrl = `${result.data.savePath}/${result.data.fileName}`;
     }
     await User.findByIdAndUpdate(req.user.id, {
